@@ -7,22 +7,37 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("");
-        System.out.println("Let's sum some numbers!");
-        System.out.println("Write your first number: ");
-        int num1 = scanner.nextInt();
+
+        System.out.print("Choose [1] for sum or [2] for subtract: ");
+        int choose = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Now, write your second number: ");
+        System.out.println();
+
+        System.out.println("Now, choose the two numbers for sum or subtract.");
+
+        System.out.println();
+
+        System.err.print("First number: ");
+        int num1 = scanner.nextInt();
+        scanner.nextLine();
+        System.err.print("Secont number: ");
         int num2 = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("");
-
-        int r;
-        r = num1 + num2;
-
-        System.out.println("The sum of " + num1 + " + " + num2 + " its equal " + r + ".");
         
+        int r = 0;
 
+        if (choose == 1) {
+            r = num1 + num2;
+        } else {
+            r = num1 - num2;
+        }
+
+        System.out.println("Your answer is: " + r);
+
+        scanner.close();
 
     }
 
