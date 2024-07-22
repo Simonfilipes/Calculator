@@ -19,7 +19,8 @@ public class Main {
             System.out.println("Welcome to my calculator!");
             System.out.println("[1] - Sum");
             System.out.println("[2] - Subtract");
-            System.out.println("[3] - Exit");
+            System.out.println("[3] - Multiplication");
+            System.out.println("[4] - Exit");
 
             System.out.println();
 
@@ -28,7 +29,7 @@ public class Main {
             int choose = scanner.nextInt();
             scanner.nextLine();
 
-            if (choose == 3) {
+            if (choose == 4) {
                 clearConsole();
 
                 System.out.println("Thanks for enjoying!");
@@ -37,7 +38,7 @@ public class Main {
                 break;
             }
 
-            if (choose != 1 && choose != 2 && choose != 3) {
+            if (choose != 1 && choose != 2 && choose != 3 && choose != 4) {
                 clearConsole();
 
                 System.out.println("Chek your answer, you must have written something wrong.");
@@ -67,6 +68,9 @@ public class Main {
             }
             if (choose == 2) {
                 r = num1 - num2;
+            }
+            if (choose == 3) {
+                r = num1 * num2;
             }
 
             System.out.println("Your answer is: " + r);
